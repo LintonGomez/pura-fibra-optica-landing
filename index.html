@@ -777,6 +777,26 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .head-card h1{font-size:clamp(27px,7.5vw,38px)!important;line-height:.9!important}
 }
 
+
+/* Typography styling specifically for SVG text on the curved headline */
+.left-copy .headline-curve-svg .head-curve-text{
+  font-family:'Fredoka',sans-serif!important;
+  font-size:40px!important;
+  font-weight:700!important;
+  fill:#fffdf7!important;
+  stroke:#17104b!important;
+  stroke-width:2.8px!important;
+  stroke-linejoin:round;
+  paint-order:stroke fill;
+}
+.left-copy .headline-curve-svg .head-curve-text .head-curve-yellow{
+  fill:#ffd400!important;
+  stroke:#17104b!important;
+}
+@media(max-width:700px){
+  .left-copy .headline-curve-svg .head-curve-text{font-size:40px!important;stroke-width:2.5px!important}
+}
+
 </style>
 </head>
 <body>
