@@ -884,6 +884,41 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .headline-three-lines .head-curve-text{font-size:43px!important;stroke-width:8px!important;letter-spacing:-1.8px!important}
 }
 
+
+/* Final poster finish: compact bubble lettering, thick connected navy edge, extrusion and highlight */
+.left-copy .headline-three-lines .head-curve-text{
+  font-family:'Fredoka','Arial Rounded MT Bold',sans-serif!important;
+  font-size:46px!important;
+  font-weight:700!important;
+  letter-spacing:-2.8px!important;
+  stroke:#100b3d!important;
+  stroke-width:9px!important;
+  stroke-linejoin:round!important;
+  stroke-linecap:round!important;
+  paint-order:stroke fill!important;
+  filter:
+    drop-shadow(0 2px 0 #100b3d)
+    drop-shadow(0 4px 0 #100b3d)
+    drop-shadow(0 6px 1px rgba(10,5,40,.9))!important;
+}
+.left-copy .headline-three-lines .head-curve-yellow{
+  fill:#ffd21a!important;
+  stroke:#100b3d!important;
+  stroke-width:9px!important;
+  filter:
+    drop-shadow(0 2px 0 #100b3d)
+    drop-shadow(0 4px 0 #100b3d)
+    drop-shadow(0 6px 1px rgba(10,5,40,.9))!important;
+}
+@media(min-width:701px){
+ .left-copy .headline-three-lines .head-curve-text{font-size:38px!important;letter-spacing:-2px!important;stroke-width:7px!important}
+ .left-copy .headline-three-lines .head-curve-yellow{stroke-width:7px!important}
+}
+@media(max-width:700px){
+ .left-copy .headline-three-lines .head-curve-text{font-size:43px!important;letter-spacing:-2.5px!important;stroke-width:8.5px!important}
+ .left-copy .headline-three-lines .head-curve-yellow{stroke-width:8.5px!important}
+}
+
 </style>
 </head>
 <body>
