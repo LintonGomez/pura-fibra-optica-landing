@@ -168,6 +168,33 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
  .brand-footer .footer-nav a{font-size:12px}
 }
 
+
+/* Mascot logo: remove the pale image rectangle visually and lift it from the background */
+.brand-logo,.footer-logo{
+  mix-blend-mode:multiply;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  filter:drop-shadow(0 3px 2px rgba(0,0,0,.22)) drop-shadow(0 0 1px rgba(255,255,255,.3));
+}
+.brand-logo{width:104px;height:62px;object-fit:contain;flex:0 0 auto}
+.footer-logo{
+  width:clamp(155px,25vw,270px);
+  max-height:190px;
+  filter:drop-shadow(0 7px 5px rgba(0,0,0,.58)) drop-shadow(0 0 2px rgba(255,255,255,.5));
+}
+.footer-brand-copy strong{letter-spacing:.3px}
+@media(max-width:700px){
+ .brand-logo{width:82px;height:50px}
+ .footer-logo{width:110px;max-height:100px}
+ .footer-identity{gap:14px}
+}
+@media(max-width:380px){
+ .brand-logo{width:66px;height:44px}
+ .brand-name{font-size:15px}
+ .brand-tag{font-size:10px}
+}
+
 </style>
 </head>
 <body>
