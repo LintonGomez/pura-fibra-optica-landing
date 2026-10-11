@@ -1016,6 +1016,34 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .headline-three-lines .linea-3{transform:perspective(240px) rotateX(-7deg) rotate(1deg) scaleY(1.08)!important}
 }
 
+
+/* Vector sticker headline: real arched text, unified navy backing, glossy yellow bubble fill */
+.left-copy .headline-three-lines{
+ display:block!important;width:100%!important;max-width:100%!important;
+ margin:0!important;padding:0!important;overflow:visible!important;
+}
+.left-copy .headline-three-lines .headline-sticker-svg{
+ display:block;width:100%;height:auto;overflow:visible;
+}
+.left-copy .headline-sticker-svg .sticker-line{
+ font-family:'Fredoka',sans-serif;
+ font-size:39px;
+ font-weight:700;
+ letter-spacing:-1.8px;
+}
+.left-copy .headline-sticker-svg .sticker-face{
+ stroke:#11114e;stroke-width:2.2px;stroke-linejoin:round;paint-order:stroke fill;
+}
+.left-copy .headline-sticker-svg .sticker-white{fill:url(#sticker-white)}
+.left-copy .headline-sticker-svg .sticker-yellow{fill:url(#sticker-yellow)}
+@media(min-width:701px){
+ .left-copy .headline-three-lines{max-width:330px!important}
+ .left-copy .headline-sticker-svg .sticker-line{font-size:34px;letter-spacing:-1.8px}
+}
+@media(max-width:700px){
+ .left-copy .headline-sticker-svg .sticker-line{font-size:38px;letter-spacing:-2px}
+}
+
 </style>
 </head>
 <body>
@@ -1027,9 +1055,41 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 <header id="inicio" class="hero"><div class="hero-inner">
 <section class="left-copy" aria-label="Propuesta de valor">
 <div class="wood-card head-card"><h1 class="headline-curved headline-three-lines" aria-label="Internet. De verdad. Para tu vereda.">
-  <span class="linea-texto linea-1">Internet</span>
-  <span class="linea-texto linea-2">De verdad</span>
-  <span class="linea-texto linea-3">Para tu vereda</span>
+<svg class="headline-curve-svg headline-sticker-svg" viewBox="0 0 380 190" role="img" aria-label="Internet. De verdad. Para tu vereda.">
+ <defs>
+  <linearGradient id="sticker-white" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#ffffff"/><stop offset=".65" stop-color="#fffefb"/><stop offset="1" stop-color="#e7e8ff"/>
+  </linearGradient>
+  <linearGradient id="sticker-yellow" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#fff36b"/><stop offset=".35" stop-color="#ffdf18"/><stop offset="1" stop-color="#ffb900"/>
+  </linearGradient>
+  <path id="sticker-arc-1" d="M 22,53 Q 190,2 358,53"/>
+  <path id="sticker-arc-2" d="M 15,105 Q 190,52 365,105"/>
+  <path id="sticker-arc-3" d="M 16,158 Q 190,112 364,158"/>
+  <filter id="sticker-shadow" x="-20%" y="-25%" width="140%" height="170%">
+   <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+   <feOffset in="blur" dx="0" dy="5" result="offset"/>
+   <feComponentTransfer><feFuncA type="linear" slope=".6"/></feComponentTransfer>
+   <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+ </defs>
+ <!-- A single dark silhouette visually unifies the three lines like a sticker -->
+ <g filter="url(#sticker-shadow)" stroke="#11114e" stroke-width="15" stroke-linejoin="round" stroke-linecap="round" fill="none">
+  <text class="sticker-line"><textPath href="#sticker-arc-1" startOffset="50%" text-anchor="middle">INTERNET</textPath></text>
+  <text class="sticker-line"><textPath href="#sticker-arc-2" startOffset="50%" text-anchor="middle">DE VERDAD</textPath></text>
+  <text class="sticker-line"><textPath href="#sticker-arc-3" startOffset="50%" text-anchor="middle">PARA TU VEREDA</textPath></text>
+ </g>
+ <g class="sticker-face">
+  <text class="sticker-line sticker-white"><textPath href="#sticker-arc-1" startOffset="50%" text-anchor="middle">INTERNET</textPath></text>
+  <text class="sticker-line sticker-yellow"><textPath href="#sticker-arc-2" startOffset="50%" text-anchor="middle">DE VERDAD</textPath></text>
+  <text class="sticker-line sticker-white"><textPath href="#sticker-arc-3" startOffset="50%" text-anchor="middle">PARA TU VEREDA</textPath></text>
+ </g>
+ <g class="sticker-gloss" fill="#ffffff" opacity=".48">
+  <ellipse cx="151" cy="75" rx="5" ry="1.8" transform="rotate(-8 151 75)"/>
+  <ellipse cx="184" cy="72" rx="7" ry="2" transform="rotate(-3 184 72)"/>
+  <ellipse cx="220" cy="76" rx="5" ry="1.6" transform="rotate(7 220 76)"/>
+ </g>
+</svg>
 </h1></div>
 <div class="wood-card intro-card">Conectamos zonas rurales con fibra óptica y tecnología satelital para que tu familia navegue sin límites.</div>
 <div class="selling-points"><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M11 11a18 18 0 0 0 0 26M37 11a18 18 0 0 1 0 26M5 5a27 27 0 0 0 0 38M43 5a27 27 0 0 1 0 38"/></svg></span><span>Estable y confiable</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="7" width="32" height="25" rx="2"/><path d="M4 38h40l-4-6H8z"/><path d="M20 12h8"/></svg></span><span>Ideal para estudiar, trabajar y entretenerse</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="13" r="5"/><circle cx="12" cy="22" r="4"/><circle cx="36" cy="22" r="4"/><path d="M14 41v-7c0-6 4-10 10-10s10 4 10 10v7M3 40v-5c0-5 3-8 8-8M45 40v-5c0-5-3-8-8-8"/></svg></span><span>Pensado para tu comunidad</span></div></div>
