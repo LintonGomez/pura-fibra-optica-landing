@@ -195,6 +195,37 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
  .brand-tag{font-size:10px}
 }
 
+
+/* Use the transparent mascot PNG consistently in contact and footer */
+.brand-logo,.footer-logo,.contact-mascot{
+  mix-blend-mode:normal!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  filter:drop-shadow(0 4px 3px rgba(0,0,0,.38)) drop-shadow(0 0 2px rgba(255,255,255,.16));
+}
+.contact-mascot{
+  display:block;
+  width:112px;
+  height:112px;
+  flex:0 0 112px;
+  object-fit:contain;
+}
+.footer-logo{
+  width:clamp(155px,25vw,270px);
+  max-height:190px;
+  object-fit:contain;
+  flex:0 0 auto;
+  filter:drop-shadow(0 6px 5px rgba(0,0,0,.48)) drop-shadow(0 0 2px rgba(255,255,255,.3));
+}
+@media(max-width:700px){
+  .contact-mascot{width:92px;height:92px;flex-basis:92px}
+  .footer-logo{width:110px;max-height:100px}
+}
+@media(max-width:380px){
+  .contact-mascot{width:76px;height:76px;flex-basis:76px}
+}
+
 </style>
 </head>
 <body>
@@ -234,7 +265,7 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 </div></section></div>
 <div class="bottom-grid">
 <section class="panel quote"><div class="quote-avatar" aria-hidden="true">🏡</div><blockquote>“Queremos que las familias rurales puedan estudiar, trabajar y estar cerca de los suyos con una conexión confiable.”<cite>El compromiso de Pura Fibra Óptica</cite></blockquote></section>
-<section class="panel" id="contacto"><div class="contact-box"><div class="contact-mascot" aria-hidden="true">🐂</div><div><h2>¿Dudas? ¡Pregúntale a nuestro equipo!</h2><a class="whatsapp" href="https://wa.me/?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Pura%20Fibra%20%C3%93ptica" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a></div></div></section>
+<section class="panel" id="contacto"><div class="contact-box"><img class="contact-mascot" src="assets/logo-pura-fibra.png" alt="Los personajes de Pura Fibra Óptica"><div><h2>¿Dudas? ¡Pregúntale a nuestro equipo!</h2><a class="whatsapp" href="https://wa.me/?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Pura%20Fibra%20%C3%93ptica" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a></div></div></section>
 <section class="panel faq-panel" id="preguntas"><h2>Preguntas frecuentes</h2><div class="faq-list">
 <details class="faq-item"><summary>¿Cuándo estará disponible en mi vereda?</summary><p>Estamos recogiendo registros para evaluar el interés y la viabilidad de cada zona. Te contactaremos cuando tengamos novedades.</p></details>
 <details class="faq-item"><summary>¿Se necesitan muchas casas para instalar?</summary><p>La planificación depende de la ubicación y la demanda. Cada registro ayuda a evaluar la zona.</p></details>
