@@ -347,6 +347,106 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   text-align:center;
 }
 
+
+/* Mobile hero copy returns to the original poster-inspired treatment */
+@media(max-width:700px){
+  .left-copy{
+    position:absolute;
+    z-index:3;
+    top:calc(-100vw * .423611 + 12px);
+    left:14px;
+    right:14px;
+    width:auto;
+    display:grid;
+    gap:7px;
+    margin:0;
+  }
+  .left-copy .head-card,
+  .left-copy .intro-card{
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    color:#fff;
+    padding:0;
+    min-height:0;
+  }
+  .left-copy .wood-card:before{display:none}
+  .left-copy .head-card h1{
+    max-width:100%;
+    font-size:clamp(27px,7.5vw,38px);
+    line-height:.98;
+    letter-spacing:-.65px;
+    font-weight:1000;
+    color:#fffdf7;
+    -webkit-text-stroke:1.15px #17164c;
+    paint-order:stroke fill;
+    text-shadow:2px 3px 0 #17164c,-1px -1px 0 #17164c,1px -1px 0 #17164c,-1px 1px 0 #17164c,1px 1px 0 #17164c,0 5px 8px rgba(0,0,0,.3);
+  }
+  .left-copy .head-card h1 span{
+    display:inline;
+    color:#ffdf00;
+    -webkit-text-stroke:1.25px #17164c;
+    text-shadow:2px 3px 0 #17164c,-1px -1px 0 #17164c,1px -1px 0 #17164c,-1px 1px 0 #17164c,1px 1px 0 #17164c,0 5px 8px rgba(0,0,0,.3);
+  }
+  .left-copy .intro-card{
+    max-width:310px;
+    font-size:clamp(10px,2.8vw,13px);
+    line-height:1.25;
+    font-weight:800;
+    color:#fffdf7;
+    text-shadow:0 2px 3px #182047,1px 1px 2px #182047;
+    padding:0;
+  }
+  .left-copy .selling-points{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+    margin-top:2px;
+  }
+  .left-copy .selling-point{
+    min-width:0;
+    min-height:0;
+    padding:7px 3px 5px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:4px;
+    border:0;
+    border-radius:12px;
+    background:rgba(255,255,255,.94);
+    color:#252052;
+    text-align:center;
+    font-size:clamp(8px,2.35vw,10px);
+    font-weight:900;
+    line-height:1.12;
+    box-shadow:0 3px 9px rgba(10,19,55,.2);
+  }
+  .left-copy .point-icon{
+    width:38px;height:38px;flex:0 0 38px;
+    border-radius:50%;
+    background:#fff;
+    color:#00a86b;
+    box-shadow:none;
+  }
+  .left-copy .selling-point:nth-child(2) .point-icon{color:#6350ed}
+  .left-copy .selling-point:nth-child(3) .point-icon{color:#5439df}
+  .left-copy .point-icon .icon-svg{width:26px;height:26px;max-width:none;max-height:none;stroke-width:3}
+  .hero-inner>.form-panel{
+    margin-top:calc(100vw * .423611 + 210px);
+  }
+}
+@media(max-width:380px){
+  .left-copy{left:11px;right:11px;gap:6px}
+  .left-copy .head-card h1{font-size:clamp(25px,7.4vw,29px);line-height:.98}
+  .left-copy .intro-card{font-size:10px}
+  .left-copy .selling-points{gap:5px}
+  .left-copy .selling-point{font-size:8px;padding:6px 2px 4px}
+  .left-copy .point-icon{width:33px;height:33px;flex-basis:33px}
+  .hero-inner>.form-panel{margin-top:calc(100vw * .423611 + 190px)}
+}
+
 </style>
 </head>
 <body>
