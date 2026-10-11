@@ -110,6 +110,64 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .nav a,.nav a.soft,.nav a.active{min-height:38px;padding:8px 11px}
 }
 
+
+/* Footer inspired by the approved brand banner */
+.brand-footer{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:26px;
+  padding:28px clamp(20px,4.8vw,70px) 30px;
+  min-height:300px;color:#f6f8ff;
+  background:radial-gradient(ellipse at 20% 0%,#0b3769 0%,#082b58 48%,#05244b 100%);
+  border-top:1px solid #214b7c;
+}
+.footer-main{display:flex;flex-direction:column;gap:24px}
+.footer-identity{display:flex;align-items:center;gap:26px;min-width:0}
+.footer-logo{display:block;width:clamp(155px,25vw,270px);height:auto;max-height:190px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 7px 5px rgba(0,0,0,.52)) drop-shadow(0 0 2px rgba(255,255,255,.35));background:transparent;border-radius:0}
+.footer-brand-copy{display:flex;flex-direction:column;gap:6px;min-width:0}
+.footer-brand-copy strong{font-size:clamp(25px,3.1vw,42px);line-height:1.05;font-weight:1000;letter-spacing:.2px;color:#ffc400;text-shadow:0 3px 0 #6b4200,0 5px 10px rgba(0,0,0,.45)}
+.footer-brand-copy small{font-size:clamp(14px,1.7vw,22px);line-height:1.35;color:#f2f5ff}
+.brand-footer .footer-nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0;padding:16px 0 0;border-top:1px solid rgba(120,173,232,.26)}
+.brand-footer .footer-nav a{display:inline-flex;align-items:center;padding:5px 16px;color:#f3f6ff;text-decoration:none;font-size:clamp(13px,1.3vw,18px);transition:color .2s ease,text-shadow .2s ease}
+.brand-footer .footer-nav a:first-child{padding-left:0}
+.brand-footer .footer-nav a+a{border-left:1px solid #2871b9}
+.brand-footer .footer-nav a:hover,.brand-footer .footer-nav a:focus-visible{color:#ffc400;text-shadow:0 0 12px rgba(255,196,0,.25)}
+.footer-social{display:flex;flex-direction:column;gap:12px}
+.footer-social>strong{font-size:clamp(18px,1.8vw,24px);color:#f6f8ff}
+.social-links{display:flex;align-items:center;flex-wrap:wrap;gap:0}
+.social-links a{display:inline-flex;align-items:center;gap:12px;padding:0 26px;color:#f3f6ff;text-decoration:none;font-size:clamp(14px,1.5vw,20px);transition:color .2s ease}
+.social-links a:first-child{padding-left:0}
+.social-links a+a{border-left:1px solid #2871b9}
+.social-links a:hover,.social-links a:focus-visible{color:#ffc400}
+.social-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:#f6f8ff;color:#082b58;font-family:Arial,sans-serif;font-size:34px;line-height:1;font-weight:900}
+.instagram-icon{font-size:38px}
+.tiktok-icon{font-size:37px}
+@media(max-width:700px){
+ .brand-footer{padding:22px 20px 26px;gap:23px;min-height:0}
+ .footer-main{gap:19px}
+ .footer-identity{gap:14px;align-items:center}
+ .footer-logo{width:110px;max-height:100px}
+ .footer-brand-copy{gap:5px}
+ .footer-brand-copy strong{font-size:clamp(19px,5vw,25px);line-height:1.1}
+ .footer-brand-copy small{font-size:13px;line-height:1.35}
+ .brand-footer .footer-nav{justify-content:flex-start;gap:0 12px;padding-top:12px}
+ .brand-footer .footer-nav a,.brand-footer .footer-nav a:first-child{padding:7px 0;font-size:13px;border-left:0}
+ .brand-footer .footer-nav a+a{border-left:0}
+ .footer-social{gap:10px}
+ .footer-social>strong{font-size:17px}
+ .social-links{gap:12px 0}
+ .social-links a,.social-links a:first-child{padding:4px 12px 4px 0;font-size:13px;gap:7px;border-left:0}
+ .social-links a+a{padding-left:12px;border-left:1px solid #2871b9}
+ .social-icon{width:29px;height:29px;font-size:26px}
+ .instagram-icon{font-size:30px}.tiktok-icon{font-size:29px}
+}
+@media(max-width:380px){
+ .footer-identity{gap:9px}
+ .footer-logo{width:90px}
+ .footer-brand-copy strong{font-size:18px}
+ .footer-brand-copy small{font-size:11px}
+ .brand-footer .footer-nav{gap:0 10px}
+ .brand-footer .footer-nav a{font-size:12px}
+}
+
 </style>
 </head>
 <body>
@@ -156,7 +214,28 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 <details class="faq-item"><summary>¿Qué velocidad ofrecen?</summary><p>Los planes y velocidades se comunicarán cuando se confirme la disponibilidad del servicio en tu sector.</p></details>
 <details class="faq-item"><summary>¿Cómo me avisarán?</summary><p>Si autorizas el contacto, te escribiremos al número de WhatsApp que registres.</p></details>
 </div></section></div></main>
-<footer><div class="footer-brand"><img class="footer-logo" src="assets/logo-pura-fibra.png" alt="Pura Fibra Óptica"><span><strong>PURA FIBRA ÓPTICA</strong><small>Pequeñas veredas, grandes conexiones.</small></span></div><nav class="footer-nav" aria-label="Enlaces de pie"><a href="#inicio">Inicio</a><a href="#como-funciona">¿Cómo funciona?</a><a href="#cobertura">Cobertura</a><a href="#familia">Planes</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contáctanos</a></nav><div class="socials"><strong>Síguenos en redes</strong>Facebook · Instagram · TikTok</div></footer>
+<footer class="brand-footer">
+  <div class="footer-main">
+    <div class="footer-identity">
+      <img class="footer-logo" src="assets/logo-pura-fibra.png" alt="Los personajes de Pura Fibra Óptica">
+      <div class="footer-brand-copy">
+        <strong>PURA FIBRA ÓPTICA</strong>
+        <small>Pequeñas veredas, grandes conexiones.</small>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Enlaces de pie de página">
+      <a href="#inicio">Inicio</a><a href="#como-funciona">¿Cómo funciona?</a><a href="#cobertura">Cobertura</a><a href="#familia">Planes</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contáctanos</a>
+    </nav>
+  </div>
+  <div class="footer-social">
+    <strong>Síguenos en redes</strong>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="social-icon" aria-hidden="true">f</span><span>Facebook</span></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="social-icon instagram-icon" aria-hidden="true">◎</span><span>Instagram</span></a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><span class="social-icon tiktok-icon" aria-hidden="true">♪</span><span>TikTok</span></a>
+    </div>
+  </div>
+</footer>
 </div>
 <script>
 "use strict";
