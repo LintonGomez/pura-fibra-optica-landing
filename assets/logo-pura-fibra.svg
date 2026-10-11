@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+<title id="title">Pura Fibra Óptica</title><desc id="desc">Mascotas de marca: toro verde y cerdito naranja con uniformes azules, sobre una cinta dorada y roja.</desc>
+<defs>
+ <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#43d5ff"/><stop offset="1" stop-color="#0876d8"/></linearGradient>
+ <linearGradient id="green" x2=".2" y2="1"><stop stop-color="#b3e83c"/><stop offset="1" stop-color="#4c8e18"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe35c"/><stop offset="1" stop-color="#ff9d00"/></linearGradient>
+ <linearGradient id="pig" x2=".1" y2="1"><stop stop-color="#ffd078"/><stop offset="1" stop-color="#df812a"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#001a38" flood-opacity=".32"/></filter>
+</defs>
+<g stroke="#092746" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" filter="url(#shadow)">
+ <!-- bull horns and head -->
+ <path fill="#ffcf38" d="M252 147 Q190 80 264 25 Q245 95 314 105Z"/>
+ <path fill="#ffcf38" d="M482 113 Q550 66 499 20 Q581 70 541 151Z"/>
+ <path fill="url(#green)" d="M180 172 Q157 123 208 94 L350 76 Q435 79 474 137 L522 173 L481 250 Q463 298 404 327 L270 311 Q214 289 204 247 L151 239 Q119 226 139 193 Q151 171 180 172Z"/>
+ <path fill="#76b52c" d="M166 188 Q184 170 213 183 L230 207 L192 230 L149 219Z" stroke-width="7"/>
+ <path fill="#194a1e" d="M168 194 Q184 181 196 194 Q186 210 168 211Z" stroke-width="5"/>
+ <path fill="#102944" d="M301 170 Q335 148 359 171 Q352 202 325 203 Q302 199 301 170Z" stroke-width="6"/>
+ <path fill="#fff" d="M315 176 Q337 161 350 178 Q345 196 330 195Z" stroke-width="4"/>
+ <path fill="#092746" d="M330 175 Q341 172 345 182 Q341 191 332 188Z" stroke-width="3"/>
+ <path fill="none" d="M229 243 Q267 263 300 236" stroke-width="7"/>
+ <path fill="#f47719" d="M151 231 Q188 216 220 232 Q249 246 281 225 Q302 219 305 234 Q285 270 239 264 Q194 255 160 260 Q140 255 151 231Z" stroke-width="7"/>
+ <!-- bull uniform -->
+ <path fill="url(#blue)" d="M207 302 L277 283 L323 319 L367 281 L436 304 Q478 331 489 399 L496 499 L155 499 L171 394 Q179 337 207 302Z"/>
+ <path fill="#80e2ff" d="M276 285 L319 318 L296 348 L262 311Z" stroke-width="7"/>
+ <path fill="#80e2ff" d="M367 281 L338 318 L364 348 L398 305Z" stroke-width="7"/>
+ <path fill="none" d="M218 364 Q242 340 267 364 M226 378 Q244 359 262 378 M235 391 Q246 381 256 391" stroke="#092746" stroke-width="7"/>
+ <!-- cap -->
+ <path fill="url(#blue)" d="M208 125 Q216 60 315 61 Q400 58 424 126 L420 161 L210 163Z"/>
+ <path fill="#168bdc" d="M210 151 Q302 126 423 151 Q395 185 280 184 Q220 179 182 166 Q175 157 210 151Z"/>
+ <text x="315" y="119" fill="#082847" stroke="none" font-family="Arial,sans-serif" font-size="25" font-weight="900" text-anchor="middle" transform="rotate(-2 315 119)">FIBRA ÓPTICA</text>
+ <!-- pig behind/right -->
+ <path fill="#f5b95e" d="M542 222 L527 181 Q535 144 568 180 L592 210Z"/>
+ <path fill="#f5b95e" d="M711 204 Q749 158 770 198 L759 238Z"/>
+ <path fill="url(#pig)" d="M526 236 Q540 179 616 178 L716 197 Q765 222 756 273 Q751 323 696 342 L604 345 Q552 323 535 283Z"/>
+ <path fill="#f28d37" d="M724 265 Q753 273 752 302 Q739 328 701 323 L684 299Z" stroke-width="6"/>
+ <path fill="#172b43" d="M601 240 Q627 222 648 241 Q638 265 618 261Z" stroke-width="5"/>
+ <path fill="#fff" d="M611 240 Q626 232 637 243 Q630 255 619 253Z" stroke-width="3"/>
+ <path fill="none" d="M571 284 Q605 309 632 288" stroke-width="7"/>
+ <path fill="#f15b72" d="M736 271 Q776 257 787 284 Q792 308 765 319 Q741 325 729 303Z" stroke-width="7"/>
+ <ellipse cx="755" cy="292" rx="5" ry="9" fill="#092746" stroke="none"/><ellipse cx="773" cy="289" rx="5" ry="9" fill="#092746" stroke="none"/>
+ <!-- pig hat -->
+ <path fill="#6b7785" d="M554 219 Q573 169 652 173 Q714 175 741 219 L748 239 L547 241Z"/>
+ <path fill="#455363" d="M537 239 Q635 214 766 239 Q744 263 648 260 Q571 259 537 239Z"/>
+ <path fill="none" d="M571 210 Q648 192 719 210" stroke="#9ca6b1" stroke-width="7"/>
+ <!-- pig uniform and arms -->
+ <path fill="url(#blue)" d="M548 340 L604 329 L646 356 L678 327 L724 345 Q751 364 758 419 L763 499 L498 499 L503 411 Q511 361 548 340Z"/>
+ <path fill="#82e5ff" d="M603 330 L628 356 L609 377 L584 344Z" stroke-width="6"/>
+ <path fill="#82e5ff" d="M678 327 L656 354 L677 375 L699 341Z" stroke-width="6"/>
+ <path fill="url(#pig)" d="M548 408 Q581 390 618 418 L680 443 Q699 454 688 475 Q678 492 654 481 L576 455 Q541 447 548 408Z" stroke-width="8"/>
+ <path fill="url(#green)" d="M189 414 Q225 389 264 415 L307 440 Q327 455 311 475 Q294 492 271 477 L229 458 Q192 469 174 450 Q161 432 189 414Z" stroke-width="8"/>
+ <!-- badge and banner -->
+ <path fill="#e51e35" d="M106 510 L794 510 L871 554 L794 590 L106 590 L29 554Z"/>
+ <path fill="url(#gold)" d="M113 491 Q113 482 124 482 L776 482 Q787 482 787 493 L787 571 L113 571Z"/>
+ <path fill="none" stroke="#fff18a" stroke-width="5" d="M132 497 L766 497"/>
+</g>
+<text x="450" y="541" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="1000" letter-spacing="-1.5" fill="#082746" stroke="#082746" stroke-width="1">PURA FIBRA ÓPTICA</text>
+</svg>
