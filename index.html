@@ -433,9 +433,7 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .selling-point:nth-child(2) .point-icon{color:#6350ed}
   .left-copy .selling-point:nth-child(3) .point-icon{color:#5439df}
   .left-copy .point-icon .icon-svg{width:26px;height:26px;max-width:none;max-height:none;stroke-width:3}
-  .hero-inner>.form-panel{
-    margin-top:calc(100vw * .423611 + 210px);
-  }
+  .hero-inner>.form-panel{margin-top:0}
 }
 @media(max-width:380px){
   .left-copy{left:11px;right:11px;gap:6px}
@@ -445,6 +443,18 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .selling-point{font-size:8px;padding:6px 2px 4px}
   .left-copy .point-icon{width:33px;height:33px;flex-basis:33px}
   .hero-inner>.form-panel{margin-top:calc(100vw * .423611 + 190px)}
+}
+
+
+/* Correct mobile hero stacking: copy overlays the illustration; form follows it */
+@media(max-width:700px){
+  .hero{padding-top:calc(100vw * .423611)}
+  .hero-inner{position:relative;display:flex;flex-direction:column;gap:0;padding:0 14px 18px;min-height:0}
+  .hero-inner>.left-copy{position:absolute;top:calc(-100vw * .423611 + 12px);left:14px;right:14px;width:auto}
+  .hero-inner>.form-panel{position:relative;top:auto;left:auto;right:auto;align-self:stretch;width:100%;margin:0!important;order:2}
+}
+@media(max-width:380px){
+  .hero-inner>.left-copy{left:11px;right:11px}
 }
 
 </style>
