@@ -919,6 +919,72 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
  .left-copy .headline-three-lines .head-curve-yellow{stroke-width:8.5px!important}
 }
 
+
+/* Headline built as real text spans, following the supplied Fredoka poster treatment */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+.left-copy .headline-three-lines{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0 0 8px!important;
+  font-family:'Fredoka',sans-serif!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+  line-height:.78!important;
+  letter-spacing:-1px!important;
+  overflow:visible!important;
+}
+.left-copy .headline-three-lines .linea-texto{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  white-space:nowrap!important;
+  font-family:'Fredoka',sans-serif!important;
+  font-weight:700!important;
+  line-height:.88!important;
+  letter-spacing:-1.8px!important;
+  -webkit-text-stroke:0!important;
+  paint-order:normal!important;
+  filter:
+    drop-shadow(-3px -3px 0 #11114e)
+    drop-shadow(3px -3px 0 #11114e)
+    drop-shadow(-3px 3px 0 #11114e)
+    drop-shadow(3px 3px 0 #11114e)
+    drop-shadow(0 6px 3px rgba(0,0,0,.42))!important;
+}
+.left-copy .headline-three-lines .linea-1{
+  font-size:clamp(34px,4.1vw,48px)!important;
+  color:#fff!important;
+  transform:scaleY(1.1) rotate(-1deg);
+}
+.left-copy .headline-three-lines .linea-2{
+  font-size:clamp(38px,4.8vw,56px)!important;
+  color:#ffd000!important;
+  margin:1px 0 2px!important;
+  transform:scaleY(1.14);
+}
+.left-copy .headline-three-lines .linea-3{
+  font-size:clamp(23px,2.65vw,32px)!important;
+  color:#fff!important;
+  transform:scaleY(1.08) rotate(1deg);
+}
+@media(min-width:701px){
+ .left-copy .headline-three-lines .linea-1{font-size:clamp(30px,3vw,42px)!important}
+ .left-copy .headline-three-lines .linea-2{font-size:clamp(32px,3.5vw,46px)!important}
+ .left-copy .headline-three-lines .linea-3{font-size:clamp(19px,2.1vw,27px)!important}
+}
+@media(max-width:700px){
+ .left-copy .headline-three-lines{align-items:flex-start!important;text-align:left!important}
+ .left-copy .headline-three-lines .linea-1{font-size:clamp(30px,8.6vw,39px)!important}
+ .left-copy .headline-three-lines .linea-2{font-size:clamp(31px,9vw,41px)!important}
+ .left-copy .headline-three-lines .linea-3{font-size:clamp(22px,6.2vw,29px)!important}
+}
+
 </style>
 </head>
 <body>
@@ -929,17 +995,10 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 </nav>
 <header id="inicio" class="hero"><div class="hero-inner">
 <section class="left-copy" aria-label="Propuesta de valor">
-<div class="wood-card head-card"><h1 class="headline-curved headline-three-lines">
-<svg class="headline-curve-svg" viewBox="0 0 360 168" role="img" aria-label="Internet. De verdad. Para tu vereda.">
-  <defs>
-    <path id="headline-curve-line1" d="M 10,43 Q 180,4 350,43"/>
-    <path id="headline-curve-line2" d="M 10,91 Q 180,54 350,91"/>
-    <path id="headline-curve-line3" d="M 10,139 Q 180,108 350,139"/>
-  </defs>
-  <text class="head-curve-text"><textPath href="#headline-curve-line1" startOffset="50%" text-anchor="middle">INTERNET</textPath></text>
-  <text class="head-curve-text head-curve-yellow"><textPath href="#headline-curve-line2" startOffset="50%" text-anchor="middle">DE VERDAD</textPath></text>
-  <text class="head-curve-text"><textPath href="#headline-curve-line3" startOffset="50%" text-anchor="middle">PARA TU VEREDA</textPath></text>
-</svg>
+<div class="wood-card head-card"><h1 class="headline-curved headline-three-lines" aria-label="Internet. De verdad. Para tu vereda.">
+  <span class="linea-texto linea-1">Internet</span>
+  <span class="linea-texto linea-2">De verdad</span>
+  <span class="linea-texto linea-3">Para tu vereda</span>
 </h1></div>
 <div class="wood-card intro-card">Conectamos zonas rurales con fibra óptica y tecnología satelital para que tu familia navegue sin límites.</div>
 <div class="selling-points"><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M11 11a18 18 0 0 0 0 26M37 11a18 18 0 0 1 0 26M5 5a27 27 0 0 0 0 38M43 5a27 27 0 0 1 0 38"/></svg></span><span>Estable y confiable</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="7" width="32" height="25" rx="2"/><path d="M4 38h40l-4-6H8z"/><path d="M20 12h8"/></svg></span><span>Ideal para estudiar, trabajar y entretenerse</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="13" r="5"/><circle cx="12" cy="22" r="4"/><circle cx="36" cy="22" r="4"/><path d="M14 41v-7c0-6 4-10 10-10s10 4 10 10v7M3 40v-5c0-5 3-8 8-8M45 40v-5c0-5-3-8-8-8"/></svg></span><span>Pensado para tu comunidad</span></div></div>
