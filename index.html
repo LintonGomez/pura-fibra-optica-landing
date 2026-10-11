@@ -820,6 +820,39 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .headline-three-lines .head-curve-text{font-size:37px!important;stroke-width:4px!important}
 }
 
+
+/* Match the reference lettering more closely: rounded Fredoka, heavy navy sticker outline */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Paytone+One&display=swap');
+.left-copy .headline-three-lines .headline-curve-svg{
+  width:100%;
+  display:block;
+  overflow:visible;
+}
+.left-copy .headline-three-lines .head-curve-text{
+  font-family:'Fredoka','Arial Rounded MT Bold',sans-serif!important;
+  font-size:40px!important;
+  font-weight:700!important;
+  letter-spacing:-.45px;
+  fill:#fffdf9!important;
+  stroke:#171044!important;
+  stroke-width:7.5px!important;
+  stroke-linejoin:round!important;
+  stroke-linecap:round!important;
+  paint-order:stroke fill!important;
+  filter:drop-shadow(0 3px 0 rgba(14,8,51,.8));
+}
+.left-copy .headline-three-lines .head-curve-yellow{
+  fill:#ffd719!important;
+  stroke:#171044!important;
+}
+@media(min-width:701px){
+ .left-copy .headline-three-lines{max-width:330px}
+ .left-copy .headline-three-lines .head-curve-text{font-size:34px!important;stroke-width:6px!important}
+}
+@media(max-width:700px){
+ .left-copy .headline-three-lines .head-curve-text{font-size:38px!important;stroke-width:7px!important}
+}
+
 </style>
 </head>
 <body>
