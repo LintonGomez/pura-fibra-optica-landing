@@ -853,6 +853,37 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
  .left-copy .headline-three-lines .head-curve-text{font-size:38px!important;stroke-width:7px!important}
 }
 
+
+/* Poster headline: tighter letter spacing, larger glyphs, layered thick outline/shadows */
+.left-copy .headline-three-lines .headline-curve-svg{
+  width:100%;
+  display:block;
+  overflow:visible;
+}
+.left-copy .headline-three-lines .head-curve-text{
+  font-family:'Fredoka',sans-serif!important;
+  font-size:44px!important;
+  font-weight:700!important;
+  letter-spacing:-1.8px!important;
+  fill:#fffdf9!important;
+  stroke:#171044!important;
+  stroke-width:8.5px!important;
+  stroke-linejoin:round!important;
+  stroke-linecap:round!important;
+  paint-order:stroke fill!important;
+  filter:drop-shadow(0 3px 0 #171044) drop-shadow(0 5px 1px rgba(13,7,49,.9));
+}
+.left-copy .headline-three-lines .head-curve-yellow{
+  fill:#ffd719!important;
+  stroke:#171044!important;
+}
+@media(min-width:701px){
+  .left-copy .headline-three-lines .head-curve-text{font-size:38px!important;stroke-width:7.5px!important;letter-spacing:-1.5px!important}
+}
+@media(max-width:700px){
+  .left-copy .headline-three-lines .head-curve-text{font-size:43px!important;stroke-width:8px!important;letter-spacing:-1.8px!important}
+}
+
 </style>
 </head>
 <body>
