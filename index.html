@@ -516,6 +516,41 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   }
 }
 
+
+/* Value proposition containers are transparent on desktop and mobile */
+.left-copy .wood-card,
+.left-copy .head-card,
+.left-copy .intro-card{
+  background:transparent!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+.left-copy .wood-card:before{display:none!important}
+.left-copy .head-card h1{
+  color:#fffdf8;
+  font-weight:1000;
+  text-shadow:2px 3px 0 #17164c,-1px -1px 0 #17164c,1px -1px 0 #17164c,
+    -1px 1px 0 #17164c,1px 1px 0 #17164c,0 5px 8px rgba(0,0,0,.38);
+}
+.left-copy .head-card h1 span{
+  color:#ffd400;
+  text-shadow:2px 3px 0 #17164c,-1px -1px 0 #17164c,1px -1px 0 #17164c,
+    -1px 1px 0 #17164c,1px 1px 0 #17164c,0 5px 8px rgba(0,0,0,.38);
+}
+.left-copy .intro-card{
+  color:#fffdf7;
+  font-weight:800;
+  text-shadow:0 2px 3px #182047,1px 1px 2px #182047;
+}
+.left-copy .selling-point{
+  background:rgba(255,255,255,.94)!important;
+  border-color:transparent!important;
+  color:#252052!important;
+}
+.left-copy .point-icon{background:#fff!important;color:#00a86b!important}
+.left-copy .selling-point:nth-child(2) .point-icon{color:#6350ed!important}
+.left-copy .selling-point:nth-child(3) .point-icon{color:#5439df!important}
+
 /* Desktop: transparency must apply to the OUTER form panel as well as its inner surface */
 @media(min-width:701px){
   .form-panel{
