@@ -226,6 +226,26 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .contact-mascot{width:76px;height:76px;flex-basis:76px}
 }
 
+
+/* Brand mark finish: richer color, stronger edge contrast, clean scaling */
+.brand-logo,.footer-logo,.contact-mascot{
+  image-rendering:auto;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  filter:saturate(1.42) contrast(1.16) brightness(1.035)
+    drop-shadow(0 3px 2px rgba(0,0,0,.42))
+    drop-shadow(0 0 1px rgba(255,255,255,.32));
+}
+.footer-logo{
+  filter:saturate(1.48) contrast(1.2) brightness(1.08)
+    drop-shadow(0 5px 4px rgba(0,0,0,.5))
+    drop-shadow(0 0 2px rgba(255,255,255,.5));
+}
+.contact-mascot{
+  filter:saturate(1.45) contrast(1.18) brightness(1.035)
+    drop-shadow(0 4px 3px rgba(80,48,18,.3));
+}
+
 </style>
 </head>
 <body>
