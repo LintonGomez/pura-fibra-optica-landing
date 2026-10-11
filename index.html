@@ -692,6 +692,51 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 .left-copy .intro-card{font-weight:800!important}
 .left-copy .selling-point{font-weight:800!important}
 
+
+/* Real SVG curved text for the hero paragraph */
+.left-copy .intro-arched{
+  width:100%!important;
+  max-width:350px!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  clip-path:none!important;
+  overflow:visible!important;
+}
+.left-copy .intro-arched-svg{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+.left-copy .intro-arched-text{
+  font-family:'Poppins',sans-serif;
+  font-size:12px;
+  font-weight:800;
+  fill:#fffdf7;
+  stroke:#17204d;
+  stroke-width:.65px;
+  paint-order:stroke fill;
+  text-shadow:0 2px 3px rgba(0,0,0,.25);
+}
+.left-copy .intro-arched-line2{font-size:11.5px}
+.left-copy .intro-arched-line3{font-size:11.5px}
+@media(min-width:701px){
+  .left-copy .intro-arched{max-width:310px!important}
+  .left-copy .intro-arched-svg{width:100%}
+  .left-copy .intro-arched-text{font-size:11px}
+  .left-copy .intro-arched-line2,.left-copy .intro-arched-line3{font-size:10.5px}
+}
+@media(max-width:700px){
+  .left-copy .intro-arched{max-width:100%!important}
+  .left-copy .intro-arched-svg{width:100%}
+  .left-copy .intro-arched-text{font-size:12px}
+  .left-copy .intro-arched-line2,.left-copy .intro-arched-line3{font-size:11px}
+}
+
 </style>
 </head>
 <body>
@@ -703,7 +748,16 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 <header id="inicio" class="hero"><div class="hero-inner">
 <section class="left-copy" aria-label="Propuesta de valor">
 <div class="wood-card head-card"><h1>Internet <span>de verdad</span> para tu vereda</h1></div>
-<div class="wood-card intro-card">Conectamos zonas rurales con fibra óptica y tecnología satelital para que tu familia navegue sin límites.</div>
+<div class="wood-card intro-card intro-arched">
+<svg class="intro-arched-svg" viewBox="0 0 340 76" role="img" aria-label="Conectamos zonas rurales con fibra óptica y tecnología satelital para que tu familia navegue sin límites.">
+  <defs><path id="intro-arc-path" d="M 12,56 Q 170,2 328,56"/></defs>
+  <text class="intro-arched-text">
+    <textPath href="#intro-arc-path" startOffset="50%" text-anchor="middle">Conectamos zonas rurales con fibra óptica</textPath>
+  </text>
+  <text class="intro-arched-text intro-arched-line2" x="170" y="57" text-anchor="middle">y tecnología satelital para tu familia</text>
+  <text class="intro-arched-text intro-arched-line3" x="170" y="71" text-anchor="middle">navegue sin límites.</text>
+</svg>
+</div>
 <div class="selling-points"><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M11 11a18 18 0 0 0 0 26M37 11a18 18 0 0 1 0 26M5 5a27 27 0 0 0 0 38M43 5a27 27 0 0 1 0 38"/></svg></span><span>Estable y confiable</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="7" width="32" height="25" rx="2"/><path d="M4 38h40l-4-6H8z"/><path d="M20 12h8"/></svg></span><span>Ideal para estudiar, trabajar y entretenerse</span></div><div class="selling-point"><span class="point-icon"><svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="13" r="5"/><circle cx="12" cy="22" r="4"/><circle cx="36" cy="22" r="4"/><path d="M14 41v-7c0-6 4-10 10-10s10 4 10 10v7M3 40v-5c0-5 3-8 8-8M45 40v-5c0-5-3-8-8-8"/></svg></span><span>Pensado para tu comunidad</span></div></div>
 </section>
 <section class="form-panel" id="registro" aria-labelledby="form-title">
