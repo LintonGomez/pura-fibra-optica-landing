@@ -623,6 +623,60 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .intro-card{font-size:clamp(10px,3vw,12px)!important;padding:3px 8px 10px!important}
 }
 
+
+/* Strong poster-style typography and visible curved paragraph on every screen */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito:wght@800;900;1000&display=swap');
+.left-copy .head-card{padding:0!important;min-height:0!important}
+.left-copy .head-card h1{
+  font-family:'Baloo 2',system-ui,sans-serif!important;
+  font-size:clamp(36px,4.1vw,58px)!important;
+  font-weight:800!important;
+  line-height:.84!important;
+  letter-spacing:-1.5px!important;
+  transform:rotate(-2deg) scaleX(.98);
+  transform-origin:left center;
+  -webkit-text-stroke:1.5px #17164c!important;
+  paint-order:stroke fill;
+  text-shadow:3px 4px 0 #17164c,0 7px 9px rgba(0,0,0,.35)!important;
+}
+.left-copy .head-card h1 span{
+  font-family:'Baloo 2',system-ui,sans-serif!important;
+  -webkit-text-stroke:1.5px #17164c!important;
+  text-shadow:3px 4px 0 #17164c,0 7px 9px rgba(0,0,0,.35)!important;
+}
+.left-copy .intro-card{
+  font-family:'Nunito',system-ui,sans-serif!important;
+  font-weight:1000!important;
+  font-size:clamp(12px,1.25vw,16px)!important;
+  line-height:1.05!important;
+  text-align:center!important;
+  max-width:100%!important;
+  margin:5px 0 7px!important;
+  padding:8px 5px 14px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+  clip-path:none!important;
+  text-shadow:0 2px 3px #17204d,1px 1px 1px #17204d!important;
+  /* Concave arch across the baseline, more noticeable on the original poster */
+  border-radius:0 0 50% 50% / 0 0 24% 24%;
+  -webkit-box-reflect:below -4px linear-gradient(transparent 75%,rgba(0,0,0,.04));
+}
+.left-copy .selling-point{
+  font-family:'Nunito',system-ui,sans-serif!important;
+  font-weight:1000!important;
+}
+@media(min-width:701px){
+ .left-copy{width:300px!important;gap:8px!important}
+ .left-copy .head-card h1{font-size:clamp(37px,3.4vw,48px)!important}
+ .left-copy .intro-card{font-size:14px!important}
+}
+@media(max-width:700px){
+ .left-copy .head-card h1{font-size:clamp(32px,9.2vw,42px)!important;line-height:.84!important}
+ .left-copy .intro-card{font-size:clamp(11px,3.25vw,13px)!important;line-height:1.02!important}
+}
+
 </style>
 </head>
 <body>
