@@ -797,6 +797,29 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .left-copy .headline-curve-svg .head-curve-text{font-size:40px!important;stroke-width:2.5px!important}
 }
 
+
+/* Three distinct curved headline lines, matching the approved reference */
+.left-copy .headline-three-lines{width:100%;margin:0!important;padding:0!important}
+.left-copy .headline-three-lines .headline-curve-svg{width:100%;height:auto;display:block;overflow:visible}
+.left-copy .headline-three-lines .head-curve-text{
+  font-family:'Fredoka',sans-serif!important;
+  font-size:37px!important;
+  font-weight:700!important;
+  fill:#fffdf7!important;
+  stroke:#17104b!important;
+  stroke-width:4.2px!important;
+  stroke-linejoin:round!important;
+  paint-order:stroke fill!important;
+}
+.left-copy .headline-three-lines .head-curve-yellow{fill:#ffd400!important}
+@media(min-width:701px){
+  .left-copy .headline-three-lines{max-width:330px}
+  .left-copy .headline-three-lines .head-curve-text{font-size:35px!important;stroke-width:4px!important}
+}
+@media(max-width:700px){
+  .left-copy .headline-three-lines .head-curve-text{font-size:37px!important;stroke-width:4px!important}
+}
+
 </style>
 </head>
 <body>
@@ -807,14 +830,16 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 </nav>
 <header id="inicio" class="hero"><div class="hero-inner">
 <section class="left-copy" aria-label="Propuesta de valor">
-<div class="wood-card head-card"><h1 class="headline-curved">
-<svg class="headline-curve-svg" viewBox="0 0 360 122" role="img" aria-label="Internet de verdad para tu vereda">
+<div class="wood-card head-card"><h1 class="headline-curved headline-three-lines">
+<svg class="headline-curve-svg" viewBox="0 0 360 168" role="img" aria-label="Internet. De verdad. Para tu vereda.">
   <defs>
-    <path id="headline-curve-top" d="M 8,48 Q 180,-2 352,48"/>
-    <path id="headline-curve-bottom" d="M 15,91 Q 180,70 345,91"/>
+    <path id="headline-curve-line1" d="M 10,43 Q 180,4 350,43"/>
+    <path id="headline-curve-line2" d="M 10,91 Q 180,54 350,91"/>
+    <path id="headline-curve-line3" d="M 10,139 Q 180,108 350,139"/>
   </defs>
-  <text class="head-curve-text"><textPath href="#headline-curve-top" startOffset="50%" text-anchor="middle">INTERNET <tspan class="head-curve-yellow">DE VERDAD</tspan></textPath></text>
-  <text class="head-curve-text" x="180" y="112" text-anchor="middle">PARA TU VEREDA</text>
+  <text class="head-curve-text"><textPath href="#headline-curve-line1" startOffset="50%" text-anchor="middle">INTERNET</textPath></text>
+  <text class="head-curve-text head-curve-yellow"><textPath href="#headline-curve-line2" startOffset="50%" text-anchor="middle">DE VERDAD</textPath></text>
+  <text class="head-curve-text"><textPath href="#headline-curve-line3" startOffset="50%" text-anchor="middle">PARA TU VEREDA</textPath></text>
 </svg>
 </h1></div>
 <div class="wood-card intro-card">Conectamos zonas rurales con fibra óptica y tecnología satelital para que tu familia navegue sin límites.</div>
