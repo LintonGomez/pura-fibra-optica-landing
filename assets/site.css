@@ -512,11 +512,23 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 }
 
 
-/* Keep the rural hero scene unobstructed on mobile; place headline below it */
+/* Escena de portada en móvil: fondo directo del contenedor para evitar problemas de capas */
 @media(max-width:700px){
-  .hero{position:relative!important;background-image:none!important;background-color:var(--cream)!important;padding-top:0!important}
-  .hero:before{content:""!important;display:block!important;position:absolute!important;top:0!important;left:0!important;right:0!important;height:calc(100vw * .472)!important;background:#6bc3f4 url("hero-scene.png") center top/100% auto no-repeat!important;z-index:0!important;pointer-events:none!important}
-  .hero-inner{position:relative!important;z-index:1!important;padding-top:calc(100vw * .472 + 14px)!important}
+  .hero{
+    position:relative!important;
+    background-color:var(--cream)!important;
+    background-image:url("hero-scene.png")!important;
+    background-position:center top!important;
+    background-size:100% auto!important;
+    background-repeat:no-repeat!important;
+    padding-top:0!important;
+  }
+  .hero:before{content:none!important;display:none!important}
+  .hero-inner{
+    position:relative!important;
+    z-index:1!important;
+    padding-top:calc(100vw * .472 + 14px)!important;
+  }
   .hero-inner>.left-copy{margin-top:0!important}
 }
 
