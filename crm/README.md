@@ -42,6 +42,8 @@ Configure the following environment variables before starting the service:
 
 The CRM must use a dedicated `pfo_crm_app` database role, not the existing `pura_fibra_app` bootstrap/superuser. The role is limited to read contacts/leads/events, create/update contacts and leads, append lead events, and append audit records. Do not publish the PostgreSQL port.
 
+Before publishing the service, run `sudo bash scripts/bootstrap-auth-config.sh` from the deployment copy. It prompts for the administrator username/password without echoing the password and writes only a salted password hash plus a random session secret to the protected auth file. Do not send the password in chat or commit it to Git.
+
 ## Deployment shape
 
 `deploy-compose.crm.yml` is a Compose overlay for the existing `/root/n8n-docker/docker-compose.yml` stack. It expects source copied to `/root/n8n-docker/pfo-crm`, a protected `/etc/pfo-crm/pfo-crm-db.env` file for the dedicated database role, and `/etc/pfo-crm/pfo-crm-auth.env` for the CRM username, password hash, and session secret. Both files must be mode 600. The overlay binds the service to `127.0.0.1:8091` only. Use `scripts/bootstrap-db-role.sh` to create or constrain the database role after taking a current validated backup; the script never prints the generated password.

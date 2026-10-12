@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
-    "check": "node --check server.js && node --check public/app.js && node --check scripts/hash-password.js && bash -n scripts/bootstrap-db-role.sh"
+    "check": "node --check server.js && node --check public/app.js && node --check scripts/hash-password.js && bash -n scripts/bootstrap-db-role.sh && bash -n scripts/bootstrap-auth-config.sh"
   },
   "engines": {
     "node": ">=22"
