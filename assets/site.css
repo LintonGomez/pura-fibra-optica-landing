@@ -869,3 +869,9 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 
 /* Se conserva la alineación natural del icono de entretenimiento. */
 
+
+
+/* Oculta el aviso de protección de datos tras confirmar el registro en escritorio. */
+@media (min-width: 701px){
+  .form-panel.lead-submitted .privacy{display:none!important}
+}
