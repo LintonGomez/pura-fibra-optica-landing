@@ -1301,6 +1301,39 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
 .left-copy .selling-point{
   background:rgba(113,55,15,.7225)!important;
 }
+
+/* Iconos de selling points: estilo más vivo y coherente con la marca */
+.left-copy .point-icon{
+  position:relative!important;
+  isolation:isolate;
+  width:42px!important;height:42px!important;flex:0 0 42px!important;
+  display:grid!important;place-items:center!important;
+  padding:7px!important;
+  border:2px solid #ffe9a0!important;
+  border-radius:13px!important;
+  background:linear-gradient(145deg,#ffe36a 0%,#ffc400 55%,#f39a18 100%)!important;
+  color:#71370f!important;
+  box-shadow:0 3px 0 #54270d,0 0 0 3px rgba(255,196,0,.16),inset 0 1px 0 rgba(255,255,255,.75)!important;
+  transform:rotate(-3deg);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+.left-copy .point-icon .icon-svg{
+  width:25px!important;height:25px!important;max-width:none!important;max-height:none!important;
+  stroke:currentColor!important;stroke-width:2.8!important;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.35));
+}
+.left-copy .selling-point:hover .point-icon{
+  transform:rotate(0deg) scale(1.07);
+  box-shadow:0 4px 0 #54270d,0 0 0 4px rgba(255,196,0,.2),inset 0 1px 0 rgba(255,255,255,.8)!important;
+  filter:saturate(1.12);
+}
+@media(max-width:700px){
+  .left-copy .point-icon{width:39px!important;height:39px!important;flex-basis:39px!important;border-radius:12px!important}
+  .left-copy .point-icon .icon-svg{width:23px!important;height:23px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .left-copy .point-icon,.left-copy .selling-point:hover .point-icon{transition:none;transform:none}
+}
 </style>
 </head>
 <body>
