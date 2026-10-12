@@ -37,3 +37,12 @@ Este repositorio y las capacidades que se incorporen a Pura Fibra Óptica deben 
 ## Evolución inmediata prevista
 
 El siguiente producto a validar es un **MVP de CRM**, no un CRM completo: recibir las solicitudes de la landing, conservar los datos necesarios del contacto y su vereda, permitir el seguimiento comercial básico y mantener trazabilidad. Antes de elegir o añadir almacenamiento y servicios, se debe auditar el destino actual del webhook y reutilizarlo si satisface las necesidades. La incorporación del CRM no debe comprometer el funcionamiento ligero de la landing ni obligar a implementar desde el inicio facturación, inventario, aprovisionamiento técnico u otros módulos futuros.
+
+
+## Módulo CRM (MVP)
+
+El código del CRM ligero se mantiene en `crm/`. La primera versión se conecta al esquema PostgreSQL existente `pfo`; no crea una segunda base de clientes ni sustituye n8n. Incluye autenticación de administrador, listado y búsqueda de interesados, seguimiento comercial, estados e historial auditable. No elimina registros ni envía mensajes.
+
+El servicio se despliega por separado en el VPS y permanece enlazado a `127.0.0.1`; su publicación HTTPS requiere configurar credenciales fuera del repositorio y aplicar la ruta Caddy documentada en `crm/deploy-Caddyfile.snippet`. No se han activado los flujos V2 ni se ha cambiado el webhook público como parte del CRM.
+
+El workflow de GitHub Pages publica únicamente `index.html`, `assets/` y `.nojekyll`; los archivos del servicio CRM no se empaquetan como parte del sitio estático.

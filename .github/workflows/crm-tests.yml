@@ -1,0 +1,33 @@
+name: CRM module checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "crm/**"
+      - ".github/workflows/crm-tests.yml"
+  pull_request:
+    paths:
+      - "crm/**"
+      - ".github/workflows/crm-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: crm/package-lock.json
+      - run: npm ci
+        working-directory: crm
+      - run: npm run check
+        working-directory: crm
+      - run: npm test
+        working-directory: crm

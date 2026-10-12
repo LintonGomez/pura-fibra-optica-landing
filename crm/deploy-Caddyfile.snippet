@@ -1,0 +1,7 @@
+# Add this route before the existing catch-all reverse_proxy in the Pura Fibra Caddy site.
+# The CRM service remains bound to loopback; the application enforces login and same-origin writes.
+@pfo_crm_root path /crm
+redir @pfo_crm_root /crm/ 308
+handle_path /crm/* {
+  reverse_proxy 127.0.0.1:8091
+}
