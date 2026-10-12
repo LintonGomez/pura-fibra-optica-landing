@@ -736,3 +736,30 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .topbar .nav a{transition:none}
 }
 
+/* 15. Nombre de marca en dos líneas con mayor definición */
+.topbar .brand-name{
+  display:flex!important;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+  color:#71370f!important;
+  font-weight:900!important;
+  -webkit-text-stroke:.35px rgba(73,37,13,.55);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.85),
+    0 2px 0 rgba(113,55,15,.16),
+    0 3px 5px rgba(73,37,13,.22)!important;
+}
+.topbar .brand-name>span{display:block;white-space:nowrap}
+@media(max-width:700px){
+  .topbar .brand-name{
+    font-size:clamp(20px,5.8vw,26px)!important;
+    line-height:1.02!important;
+    -webkit-text-stroke:.25px rgba(73,37,13,.5);
+    text-shadow:0 1px 0 rgba(255,255,255,.8),0 2px 4px rgba(73,37,13,.2)!important;
+  }
+}
+@media(max-width:380px){
+  .topbar .brand-name{font-size:clamp(18px,5.6vw,21px)!important}
+}
+
