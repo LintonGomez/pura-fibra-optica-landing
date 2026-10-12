@@ -21,8 +21,8 @@ if ! command -v docker >/dev/null 2>&1 || ! command -v openssl >/dev/null 2>&1; 
   echo "Se requieren docker y openssl." >&2
   exit 1
 fi
-LATEST_BACKUP="$(find "$BACKUP_DIR" -maxdepth 1 -type f -name '*.dump' -mmin -1440 -printf '%T@ %p\n' 2>/dev/null | sort -nr | head -n 1 | cut -d' ' -f2-)"
-if [ -z "$LATEST_BACKUP" ] || ! command -v pg_restore >/dev/null 2>&1 || ! pg_restore --list "$LATEST_BACKUP" >/dev/null 2>&1; then
+LATEST_BACKUP="$(find "$BACKUP_DIR" -maxdepth 1 -type f -name '*.dump' -mmin -1440 -printf '%T@ %f\n' 2>/dev/null | sort -nr | head -n 1 | cut -d' ' -f2-)"
+if [ -z "$LATEST_BACKUP" ] || ! docker run --rm -v "$BACKUP_DIR:/backups:ro" postgres:16-alpine pg_restore --list "/backups/$LATEST_BACKUP" >/dev/null 2>&1; then
   echo "No se encontró un backup PostgreSQL reciente y validable (24 h). Ejecuta primero backup_all y valida el dump." >&2
   exit 1
 fi
