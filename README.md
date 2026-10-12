@@ -36,10 +36,10 @@ Este repositorio y las capacidades que se incorporen a Pura Fibra Óptica deben 
 
 ## CRM de OpenTelecomAI: piloto Pura Fibra Óptica
 
-El CRM es una capacidad compartida de **OpenTelecomAI**, no un producto exclusivo de Pura Fibra Óptica. Este repositorio aporta el primer caso real: captar interesados en cobertura de fibra y permitir su seguimiento comercial. Globalwifi y otras organizaciones podrán utilizar la capacidad común cuando existan flujos, configuración y autorizaciones adecuados.
+El CRM es una capacidad compartida cuyo código fuente se mantiene en el repositorio [OpenTelecomAI, módulo `modules/crm/`](https://github.com/LintonGomez/OpenTelecomAI/tree/main/modules/crm). Pura Fibra Óptica es el primer piloto operativo, no la propietaria exclusiva del producto.
 
-La carpeta `crm/` contiene el prototipo actual y su primer adaptador de persistencia usa el esquema PostgreSQL `pfo`; su ubicación aquí es provisional respecto a la propiedad del producto. La landing sigue siendo un sitio estático y n8n conserva el papel de automatización del formulario. El CRM no sustituye n8n ni crea una segunda base de clientes para PFO.
+Este repositorio se limita a la landing y su integración de captación. El formulario continúa enviando solicitudes al webhook existente de n8n; no se ha cambiado el destino ni se han activado los flujos V2. La conexión con el CRM queda pendiente de aprobación de privacidad/consentimiento y aceptación integral del recorrido.
 
-La evolución debe permitir añadir por incrementos las necesidades específicas de un ISP —tickets, planes, facturación, inventario de equipos e infraestructura NAP/puertos— sin convertirlas todas en requisitos del MVP inicial. La publicación y conexión del formulario siguen pendientes de la validación de privacidad/consentimiento y de la aceptación integral del flujo.
+El CRM inicial usa el esquema `pfo` y el modelo de datos de Pura Fibra Óptica. No debe suponerse que Globalwifi u otra organización puede conectarse al mismo servicio: cada integración requiere un contrato de datos y límites de autorización validados. Los módulos de tickets, planes, facturación e inventarios ISP se incorporarán por incrementos en OpenTelecomAI cuando sus flujos estén definidos.
 
-El workflow de GitHub Pages publica únicamente `index.html`, `assets/` y `.nojekyll`; los archivos del servicio CRM no se empaquetan como parte del sitio estático.
+El workflow de GitHub Pages publica únicamente `index.html`, `assets/` y `.nojekyll`; el código de servidor del CRM no forma parte de la landing estática.
