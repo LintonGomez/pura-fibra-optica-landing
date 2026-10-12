@@ -34,15 +34,12 @@ Este repositorio y las capacidades que se incorporen a Pura Fibra Óptica deben 
 - **Separación de responsabilidades:** la landing captura el interés; la futura capacidad CRM gestiona contactos y seguimiento comercial; las capacidades técnicas de red podrán integrarse después con OpenTelecomAI/OTA_MicroNode. No crear una base institucional de conocimiento paralela a OpenTelecomAI.
 - **Verificación y privacidad:** probar el flujo completo, evitar duplicados cuando sea posible y proteger los datos personales. No incluir secretos en el frontend.
 
-## Evolución inmediata prevista
+## CRM de OpenTelecomAI: piloto Pura Fibra Óptica
 
-El siguiente producto a validar es un **MVP de CRM**, no un CRM completo: recibir las solicitudes de la landing, conservar los datos necesarios del contacto y su vereda, permitir el seguimiento comercial básico y mantener trazabilidad. Antes de elegir o añadir almacenamiento y servicios, se debe auditar el destino actual del webhook y reutilizarlo si satisface las necesidades. La incorporación del CRM no debe comprometer el funcionamiento ligero de la landing ni obligar a implementar desde el inicio facturación, inventario, aprovisionamiento técnico u otros módulos futuros.
+El CRM es una capacidad compartida de **OpenTelecomAI**, no un producto exclusivo de Pura Fibra Óptica. Este repositorio aporta el primer caso real: captar interesados en cobertura de fibra y permitir su seguimiento comercial. Globalwifi y otras organizaciones podrán utilizar la capacidad común cuando existan flujos, configuración y autorizaciones adecuados.
 
+La carpeta `crm/` contiene el prototipo actual y su primer adaptador de persistencia usa el esquema PostgreSQL `pfo`; su ubicación aquí es provisional respecto a la propiedad del producto. La landing sigue siendo un sitio estático y n8n conserva el papel de automatización del formulario. El CRM no sustituye n8n ni crea una segunda base de clientes para PFO.
 
-## Módulo CRM (MVP)
-
-El código del CRM ligero se mantiene en `crm/`. La primera versión se conecta al esquema PostgreSQL existente `pfo`; no crea una segunda base de clientes ni sustituye n8n. Incluye autenticación de administrador, listado y búsqueda de interesados, seguimiento comercial, estados e historial auditable. No elimina registros ni envía mensajes.
-
-El servicio se despliega por separado en el VPS y permanece enlazado a `127.0.0.1`; su publicación HTTPS requiere configurar credenciales fuera del repositorio y aplicar la ruta Caddy documentada en `crm/deploy-Caddyfile.snippet`. No se han activado los flujos V2 ni se ha cambiado el webhook público como parte del CRM.
+La evolución debe permitir añadir por incrementos las necesidades específicas de un ISP —tickets, planes, facturación, inventario de equipos e infraestructura NAP/puertos— sin convertirlas todas en requisitos del MVP inicial. La publicación y conexión del formulario siguen pendientes de la validación de privacidad/consentimiento y de la aceptación integral del flujo.
 
 El workflow de GitHub Pages publica únicamente `index.html`, `assets/` y `.nojekyll`; los archivos del servicio CRM no se empaquetan como parte del sitio estático.
