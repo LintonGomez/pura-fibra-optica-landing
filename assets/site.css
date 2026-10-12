@@ -614,3 +614,125 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .feature-icon,.step-illustration,.social-icon{transition:none}
   .feature:hover .feature-icon,.step:hover .step-illustration,.social-links a:hover .social-icon{transform:none}
 }
+
+/* 14. Encabezado moderno de marca: conservar al final para controlar la cascada */
+.topbar{
+  background:linear-gradient(115deg,rgba(255,249,235,.97),rgba(243,231,200,.96))!important;
+  border:1px solid rgba(113,55,15,.22)!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 26px rgba(54,34,10,.14),inset 0 1px 0 rgba(255,255,255,.8)!important;
+  backdrop-filter:blur(10px);
+}
+.brand{
+  gap:14px!important;
+  min-width:0;
+  flex-shrink:0;
+}
+.brand-logo{
+  object-fit:contain;
+  filter:drop-shadow(0 3px 3px rgba(55,34,8,.2))!important;
+}
+.brand-name{
+  display:block;
+  color:#71370f!important;
+  font-size:clamp(21px,1.8vw,27px)!important;
+  font-weight:900!important;
+  line-height:1.02!important;
+  letter-spacing:.15px!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.brand-tag{
+  display:block;
+  margin-top:7px!important;
+  color:#75563e!important;
+  font-size:12px!important;
+  line-height:1.3!important;
+  letter-spacing:.1px;
+}
+.topbar .nav{gap:5px}
+.topbar .nav a{
+  border-radius:10px;
+  transition:background-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.topbar .nav a:hover,
+.topbar .nav a:focus-visible{
+  background:rgba(255,196,0,.2);
+  color:#71370f;
+}
+.topbar .nav a.active{
+  box-shadow:inset 0 -2px 0 #ffc400;
+}
+@media(min-width:1101px){
+  .topbar{gap:20px!important;padding:10px 22px!important}
+  .brand{flex:0 1 390px;min-width:340px!important}
+  .brand-logo{width:112px!important;height:68px!important}
+  .topbar .nav{flex:1;justify-content:flex-end;min-width:0}
+  .topbar .nav a{padding:10px 11px}
+}
+@media(min-width:701px) and (max-width:1100px){
+  .topbar{height:auto!important;min-height:82px;padding:9px 14px!important;gap:12px!important}
+  .brand{flex:0 1 320px;min-width:275px!important;gap:10px!important}
+  .brand-logo{width:92px!important;height:58px!important}
+  .brand-name{font-size:clamp(19px,2.1vw,24px)!important}
+  .brand-tag{font-size:11px!important}
+  .topbar .nav{flex:1;justify-content:flex-end;flex-wrap:wrap;gap:3px}
+  .topbar .nav a{font-size:11px;padding:8px 7px}
+}
+@media(max-width:700px){
+  .topbar{
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:12px 14px 10px!important;
+    gap:11px!important;
+    border-radius:0 0 16px 16px!important;
+    border-top:3px solid #0872ed!important;
+    box-shadow:0 5px 16px rgba(54,34,10,.12)!important;
+    background:linear-gradient(110deg,#fff9eb,#f3e7c8)!important;
+  }
+  .brand{
+    width:100%!important;
+    min-width:0!important;
+    flex:0 1 auto!important;
+    gap:12px!important;
+    align-items:center!important;
+  }
+  .brand-logo{width:76px!important;height:50px!important}
+  .brand-name{
+    font-size:clamp(20px,5.8vw,26px)!important;
+    line-height:1.02!important;
+    letter-spacing:0!important;
+  }
+  .brand-tag{font-size:11px!important;margin-top:5px!important;line-height:1.2!important}
+  .topbar .nav{
+    width:100%!important;
+    display:flex!important;
+    justify-content:flex-start!important;
+    flex-wrap:nowrap!important;
+    gap:5px!important;
+    overflow-x:auto!important;
+    padding:1px 0 3px!important;
+    scrollbar-width:thin;
+  }
+  .topbar .nav a{
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:11px!important;
+    padding:8px 10px!important;
+    background:rgba(113,55,15,.055);
+  }
+  .topbar .nav a.active{background:rgba(255,196,0,.22)}
+}
+@media(max-width:380px){
+  .topbar{padding:10px 11px 9px!important;gap:9px!important}
+  .brand{gap:9px!important}
+  .brand-logo{width:64px!important;height:44px!important}
+  .brand-name{font-size:clamp(18px,5.6vw,21px)!important}
+  .brand-tag{font-size:10px!important}
+  .topbar .nav{gap:4px!important}
+  .topbar .nav a{font-size:10px!important;padding:7px 8px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .topbar .nav a{transition:none}
+}
+
