@@ -867,15 +867,5 @@ footer{background:#082b58;color:#f9e8be;padding:16px 32px;display:flex;align-ite
   .topbar .brand-name{font-size:clamp(15px,4.7vw,18px)!important;letter-spacing:-.7px!important}
 }
 
-/* Alinear ópticamente el icono de entretenimiento con los demás en móvil */
-@media(max-width:700px){
-  .family-grid .family-card:nth-child(3) .family-illustration .icon-svg{
-    transform:translateY(-3px);
-  }
-}
-@media(prefers-reduced-motion:reduce){
-  .family-grid .family-card:nth-child(3) .family-illustration .icon-svg{
-    transform:translateY(-3px);
-  }
-}
+/* Se conserva la alineación natural del icono de entretenimiento. */
 
