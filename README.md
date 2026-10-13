@@ -43,3 +43,8 @@ Este repositorio se limita a la landing y su integración de captación. El form
 El CRM inicial usa el esquema `pfo` y el modelo de datos de Pura Fibra Óptica. No debe suponerse que Globalwifi u otra organización puede conectarse al mismo servicio: cada integración requiere un contrato de datos y límites de autorización validados. Los módulos de tickets, planes, facturación e inventarios ISP se incorporarán por incrementos en OpenTelecomAI cuando sus flujos estén definidos.
 
 El workflow de GitHub Pages publica únicamente `index.html`, `assets/` y `.nojekyll`; el código de servidor del CRM no forma parte de la landing estática.
+
+
+## Contexto del proyecto y ruta prevista
+
+El estado de Pura Fibra Óptica, la relación con el CRM compartido de OpenTelecomAI, las dependencias de privacidad y el siguiente recorrido funcional están documentados en [Contexto de producto y ruta de Pura Fibra Óptica](docs/PROJECT_CONTEXT_AND_ROADMAP.md). Este documento complementa las instrucciones operativas existentes; no cambia el webhook ni activa flujos.
